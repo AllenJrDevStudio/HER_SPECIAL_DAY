@@ -1,0 +1,210 @@
+
+@media (min-width: 1440px) {
+    .page-wrapper { max-width: 1280px; }
+    .birthday-section { padding-left: 2rem; padding-right: 2rem; }
+    .cards-grid { gap: 1.7rem; }
+    .gallery-grid { gap: 1.5rem; }
+}
+
+@media (max-width: 1100px) {
+    .birthday-cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .birthday-gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1023px) {
+    .page-wrapper { padding: 2rem 1.5rem; }
+
+
+    .birthday-section {
+        min-height: auto;
+        padding: 6rem 1.25rem;
+    }
+
+    .birthday-opening {
+        min-height: calc(100svh - 3.5rem);
+    }
+
+    .birthday-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .birthday-moments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-card,
+    .letter-card,
+    .final-card {
+        padding: 3.5rem 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    html { font-size: 15px; }
+
+    .page-wrapper { padding: 1.5rem 1rem; }
+
+
+
+
+
+    .birthday-section {
+        padding: 5rem 1rem;
+    }
+
+    .birthday-opening {
+        min-height: calc(100svh - 4rem);
+        padding-top: 2rem;
+    }
+
+    .birthday-hero-card {
+        border-radius: 20px;
+        padding: 2.6rem 1.25rem;
+    }
+
+    .number-display {
+        font-size: clamp(5.5rem, 28vw, 8rem);
+    }
+
+    .section-heading {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 0.65rem;
+    }
+
+    .section-heading .section-number {
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-card {
+        min-height: 190px;
+        padding: 1.8rem 1.5rem;
+    }
+
+    .birthday-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .gallery-item {
+        border-radius: 14px;
+    }
+
+    .birthday-moments-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .moment-card {
+        min-height: 190px;
+        padding: 1.6rem 1.3rem;
+    }
+
+    .story-card,
+    .letter-card,
+    .final-card {
+        padding: 2.5rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    .text-block p {
+        font-size: 1.35rem;
+    }
+
+    .letter-body p {
+        font-size: 0.98rem;
+        line-height: 1.75;
+    }
+
+    .surprise-birthday-hint {
+        font-size: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: 1rem 1.4rem;
+        font-size: 0.88rem;
+    }
+
+    .section-cta,
+    .cta-wrapper {
+        width: 100%;
+    }
+
+    .birthday-pop {
+        font-size: 1.6rem;
+    }
+
+    .birthday-balloon {
+        font-size: 2.2rem;
+    }
+
+    .birthday-message-pop {
+        max-width: calc(100% - 2rem);
+        text-align: center;
+        white-space: normal;
+        width: max-content;
+    }
+
+    .ambient-glow {
+        filter: blur(80px);
+        opacity: 0.45;
+    }
+
+    .bg-glow-primary,
+    .bg-glow-secondary {
+        width: 90vw;
+        height: 90vw;
+    }
+}
+
+@media (max-width: 374px) {
+    html { font-size: 14px; }
+
+
+
+    .birthday-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .birthday-section {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .story-card,
+    .letter-card,
+    .final-card {
+        padding: 2rem 1.15rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .ambient-glow { animation: none; }
+    .gallery-item:hover img { transform: none; }
+}
