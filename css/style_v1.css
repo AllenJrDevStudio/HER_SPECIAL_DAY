@@ -1,19 +1,19 @@
 
 :root {
-    --bg-primary: #0d001a;
-    --bg-secondary: #1f002b;
+    --bg-primary: #080812;
+    --bg-secondary: #10101d;
     --violet: #a78bfa;
     --violet-blue: #8fa8ff;
     --soft-blue: #b7c9ff;
-    --pink: #ff69b4;
+    --pink: #f5a9c8;
     --soft-pink: #ffd0e2;
     --champagne: #f7e7ce;
     --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --text-muted: #aaa0b5;
-    --glass-bg: rgba(255, 255, 255, 0.07);
-    --glass-border: rgba(255, 255, 255, 0.15);
-    --glass-glow: rgba(255, 105, 180, 0.20);
+    --text-secondary: #b9b7c9;
+    --text-muted: #7c7a8e;
+    --glass-bg: rgba(16, 16, 29, 0.58);
+    --glass-border: rgba(167, 139, 250, 0.18);
+    --glass-glow: rgba(143, 168, 255, 0.12);
     --font-heading: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -40,30 +40,12 @@ body {
     min-height: 100svh;
     width: 100%;
     position: relative;
-    background: linear-gradient(-45deg, #0d001a, #1f002b, #380036, #120024);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background:
+        radial-gradient(circle at 50% -20%, rgba(143, 168, 255, 0.06), transparent 45%),
+        var(--bg-primary);
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Story-page atmospheric overlay */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background:
-        radial-gradient(circle at 20% 20%, rgba(255, 105, 180, 0.08), transparent 32%),
-        radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.08), transparent 34%);
 }
 
 a, button {
@@ -89,7 +71,7 @@ button {
     left: -10%;
     width: 65vw;
     height: 65vw;
-    background: radial-gradient(circle, rgba(255, 105, 180, 0.18) 0%, rgba(167, 139, 250, 0.14) 60%, transparent 100%);
+    background: radial-gradient(circle, rgba(143, 168, 255, 0.25) 0%, rgba(167, 139, 250, 0.12) 60%, transparent 100%);
 }
 
 .bg-glow-secondary {
@@ -97,7 +79,7 @@ button {
     right: -10%;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, rgba(255, 105, 180, 0.20) 0%, rgba(255, 20, 147, 0.10) 60%, transparent 100%);
+    background: radial-gradient(circle, rgba(245, 169, 200, 0.2) 0%, rgba(255, 208, 226, 0.1) 60%, transparent 100%);
     animation-delay: -5s;
 }
 
@@ -139,13 +121,11 @@ button {
 }
 
 .glass-panel {
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow:
-        0 8px 32px 0 rgba(0, 0, 0, 0.37),
-        0 0 20px rgba(255, 105, 180, 0.20);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     position: relative;
     overflow: hidden;
@@ -266,10 +246,9 @@ button {
 .hero-card:hover {
     transform: translateY(-8px);
     border-color: rgba(245, 169, 200, 0.4);
-    box-shadow:
-        0 12px 40px 0 rgba(0, 0, 0, 0.45),
-        0 0 30px rgba(255, 105, 180, 0.35);
-    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(167, 139, 250, 0.15);
+    background: rgba(20, 20, 38, 0.7);
 }
 
 .hero-card .subtitle {
@@ -333,10 +312,9 @@ button {
 .birthday-hero-card:hover {
     transform: translateY(-8px);
     border-color: rgba(245, 169, 200, 0.4);
-    box-shadow:
-        0 12px 40px 0 rgba(0, 0, 0, 0.45),
-        0 0 30px rgba(255, 105, 180, 0.35);
-    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(167, 139, 250, 0.15);
+    background: rgba(20, 20, 38, 0.7);
 }
 
 .section-shell {
@@ -463,10 +441,9 @@ button {
 .story-card:hover {
     transform: translateY(-8px);
     border-color: rgba(245, 169, 200, 0.4);
-    box-shadow:
-        0 12px 40px 0 rgba(0, 0, 0, 0.45),
-        0 0 30px rgba(255, 105, 180, 0.35);
-    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(167, 139, 250, 0.15);
+    background: rgba(20, 20, 38, 0.7);
 }
 
 .text-block p {
@@ -505,20 +482,14 @@ button {
     display: flex;
     flex-direction: column;
     transition: var(--transition-smooth);
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.30), 0 0 20px rgba(255, 105, 180, 0.15);
+    border: 1px solid rgba(167, 139, 250, 0.12);
 }
 
 .feature-card:hover {
     transform: translateY(-8px);
     border-color: rgba(245, 169, 200, 0.4);
-    box-shadow:
-        0 12px 40px 0 rgba(0, 0, 0, 0.45),
-        0 0 30px rgba(255, 105, 180, 0.35);
-    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(167, 139, 250, 0.15);
+    background: rgba(20, 20, 38, 0.7);
 }
 
 .card-icon {
@@ -615,8 +586,8 @@ button {
 
 .moment-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 105, 180, 0.40);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.40), 0 0 25px rgba(255, 105, 180, 0.25);
+    border-color: rgba(143, 168, 255, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(143, 168, 255, 0.15);
 }
 
 .moment-tag {
@@ -655,10 +626,9 @@ button {
 .letter-card:hover {
     transform: translateY(-8px);
     border-color: rgba(245, 169, 200, 0.4);
-    box-shadow:
-        0 12px 40px 0 rgba(0, 0, 0, 0.45),
-        0 0 30px rgba(255, 105, 180, 0.35);
-    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(167, 139, 250, 0.15);
+    background: rgba(20, 20, 38, 0.7);
 }
 
 .letter-body p {
@@ -701,10 +671,9 @@ button {
 .final-card:hover {
     transform: translateY(-8px);
     border-color: rgba(245, 169, 200, 0.4);
-    box-shadow:
-        0 12px 40px 0 rgba(0, 0, 0, 0.45),
-        0 0 30px rgba(255, 105, 180, 0.35);
-    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(167, 139, 250, 0.15);
+    background: rgba(20, 20, 38, 0.7);
 }
 
 .final-eyebrow {
@@ -851,9 +820,9 @@ button {
     top: 14%;
     transform: translate(-50%, 20px) scale(0.85);
     padding: 0.8rem 1.4rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(16, 16, 29, 0.72);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     color: var(--text-primary);
