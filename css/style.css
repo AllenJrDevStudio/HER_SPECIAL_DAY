@@ -397,12 +397,12 @@ button {
 
 .editorial-text {
     font-family: "Allura", cursive;
-    color: var(--text-secondary);
     font-size: 2.50rem;
     line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.8rem;
     font-weight: 300;
-    max-width: 860px;
-    margin: 0 auto;
+    
 }
 
 .scroll-cue {
