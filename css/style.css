@@ -16,6 +16,7 @@
     --glass-glow: rgba(255, 105, 180, 0.20);
     --font-heading: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-script: 'Allura', cursive;
     --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -281,7 +282,7 @@ button {
 }
 
 .hero-eyebrow {
-    font-family: "Allura", cursive;
+    font-family: var(--font-script);
     font-size: 2.50rem;
     font-weight: 300;
     color: var(--text-secondary);
@@ -394,7 +395,7 @@ button {
 }
 
 .number-display {
-    font-family: "Allura", cursive;
+    font-family: var(--font-script);
     font-size: clamp(5rem, 15vw, 10rem);
     line-height: 1;
     font-weight: 400;
@@ -418,8 +419,8 @@ button {
 }
 
 .editorial-text {
-    font-family: "Allura", cursive;
-    font-size: 2.50rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 1.8rem;
@@ -470,8 +471,8 @@ button {
 }
 
 .text-block p {
-    font-family: "Allura", cursive;
-    font-size: 2.50rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 1.8rem;
@@ -662,8 +663,8 @@ button {
 }
 
 .letter-body p {
-    font-family: "Allura", cursive;
-    font-size: 2.50rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
@@ -671,7 +672,7 @@ button {
 }
 
 .letter-closing {
-    font-family: "Allura", cursive;
+    font-family: var(--font-script);
     font-size: 1.95rem;
     color: var(--text-primary);
     margin-top: 2rem;
@@ -718,7 +719,7 @@ button {
 }
 
 .final-name {
-    font-family: "Allura", cursive;
+    font-family: var(--font-script);
     font-size: clamp(3.8rem, 8vw, 4.8rem);
     font-weight: 400;
     margin-bottom: 1.5rem;
@@ -769,7 +770,7 @@ button {
 }
 
 .reveal-number {
-    font-family: "Allura", cursive;
+    font-family: var(--font-script);
     font-size: clamp(6rem, 18vw, 11rem);
     line-height: 1;
     font-weight: 300;
@@ -791,8 +792,8 @@ button {
 }
 
 .reveal-lines p {
-    font-family: "Allura", cursive;
-    font-size: 2.50rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
@@ -801,8 +802,8 @@ button {
 
 .reveal-lines p.highlight {
     color: var(--text-primary);
-    font-family: "Allura", cursive;
-    font-size: 2.50rem;
+    font-family: var(--font-script);
+    font-size: clamp(1.6rem, 3.5vw, 2.25rem);
     margin-top: 1.5rem;
 }
 
